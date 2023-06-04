@@ -1,0 +1,38 @@
+body {
+    color: #ffffff;
+}
+/* App.js file Css */
+.App {
+    background-color: #111111;
+    height: 100vh;
+}
+/* Header CSS */
+.Header {
+    height: 8vh;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.Header .logo {
+    font-family: "Caveat", cursive;
+    color: #ffffff;
+}
+.Header .logo span,
+.green {
+    color: #dfea43;
+}
+.Header .Button {
+    border: 2px solid #ffffff;
+    font-weight: 600;
+    background-color: transparent;
+    color: #ffffff;
+}
+@media screen and (max-width: 562px) {
+    .Header {
+        height: 7vh;
+    }
+}
+
+/* Body Css */
+/* .Body {
+    height: 88vh;
+} */
