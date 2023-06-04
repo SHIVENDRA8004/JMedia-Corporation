@@ -19,7 +19,7 @@
     left: 50%;
     left: calc(50% - 50px);
 }
-.Button {
+.Button-Map {
     height: 50px;
     width: 100px;
     border: 2px solid #ffffff;
@@ -27,7 +27,7 @@
     background-color: transparent;
     color: #ffffff;
 }
-.Button:hover {
+.Button-Map:hover {
     border: 2px solid #dfea43 !important;
     color: #dfea43 !important;
 }
