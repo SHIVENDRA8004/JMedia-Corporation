@@ -12,7 +12,7 @@ function App() {
         { name: "Miami, Florida", lng: "-80.1918", lat: "25.7617" },
         { name: "Mumbai, India", lng: "72.8777", lat: "19.076" },
     ];
-    const [location, setLocation] = useState({ name: "Default", lng: "0", lat: "0" });
+    const [location, setLocation] = useState({ name: "Default", lng: "72.8777", lat: "19.076" });
     return (
         <>
             <Routes>

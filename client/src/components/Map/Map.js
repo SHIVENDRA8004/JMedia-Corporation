@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import "./Map.css";
 import mapboxgl from "mapbox-gl";
+import { Button } from "antd";
+import { Link, Navigate } from "react-router-dom";
 
 const Map = ({ location }) => {
     useEffect(() => {
@@ -94,11 +96,14 @@ const Map = ({ location }) => {
     }, []);
 
     return (
-        
         <div className="Maps ">
             <div id="map"></div>
+            <div className="btn-div">
+                <Link to="/">
+                    <Button className="Button">Back</Button>
+                </Link>
+            </div>
         </div>
-
     );
 };
 
