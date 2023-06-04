@@ -7,35 +7,40 @@ const Body = ({ headQuarters, setLocation }) => {
     return (
         <div className="container-fluid Body">
             <div className="row ">
-                <div className="col col-sm-8">
-                    <div>
-                        <h2>
+                <div className="col">
+                    <div className="text-center mt-4 mb-4">
+                        <h3 className="mt-2">
                             Our Global <span className="green">Centers</span>
-                        </h2>
-                        <p>
+                        </h3>
+                        <p className="fs-5 w-75 m-auto">
                             Discover our global presence with centers located across the Earth. From bustling cities to serene towns, we're strategically
                             positioned to serve you better.
                         </p>
                     </div>
-                    <div>Our HeadQuarters</div>
-                    <div>
-                        {headQuarters?.map((headQuarter, i) => (
-                            <div key={i}>
-                                <Space direction="vertical" size={16}>
-                                    <Card
-                                        title={headQuarter.name}
-                                        extra={<Link to="/">Map</Link>}
-                                        style={{
-                                            width: 300,
-                                        }}
-                                    >
-                                        <Link to="/map" onClick={() => HandleClick(i)}>See On Map</Link>
-                                        <p>Card content</p>
-                                        <p>Card content</p>
-                                    </Card>
-                                </Space>
-                            </div>
-                        ))}
+                    <div className="green fs-1 text-center mb-4">Our HeadQuarters</div>
+                    <div className="w-100 text-center">
+                        <table class="table table-dark table-striped table-hover w-100">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Center Location</th>
+                                    <th scope="col">Locate On Map</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {headQuarters?.map((headQuarter, i) => (
+                                    <tr key={i}>
+                                        <th scope="row">{i + 1}</th>
+                                        <td>{headQuarter.name}</td>
+                                        <td>
+                                            <Link className="green" style={{ textDecoration: "none" }} to="/map" onClick={() => HandleClick(i)}>
+                                                See On Map
+                                            </Link>
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>

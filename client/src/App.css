@@ -33,6 +33,7 @@ body {
 }
 
 /* Body Css */
-/* .Body {
-    height: 88vh;
-} */
+tr {
+    border-collapse: separate;
+    border-spacing: 2rem 2rem;
+}
