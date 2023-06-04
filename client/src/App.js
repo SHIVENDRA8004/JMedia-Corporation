@@ -3,7 +3,7 @@ import "./App.css";
 import Body from "./components/Body";
 import Header from "./components/Header";
 import Map from "./components/Map/Map.js";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 function App() {
     const headQuarters = [
         { name: "Reo De Jeneirio, Brazil", lng: "-43.1729", lat: "-22.9068" },
@@ -12,7 +12,7 @@ function App() {
         { name: "Miami, Florida", lng: "-80.1918", lat: "25.7617" },
         { name: "Mumbai, India", lng: "72.8777", lat: "19.076" },
     ];
-    const [location, setLocation] = useState(null);
+    const [location, setLocation] = useState({ name: "Default", lng: "0", lat: "0" });
     console.log(location, "From App");
     return (
         <>
@@ -37,9 +37,9 @@ function App() {
                 <Route
                     path="/map"
                     element={
-                        <ProtectedRoutes location={location}>
-                            <Map />
-                        </ProtectedRoutes>
+                        // <ProtectedRoutes location={location}>
+                        <Map location={location} />
+                        /* </ProtectedRoutes> */
                     }
                 ></Route>
             </Routes>
@@ -47,12 +47,12 @@ function App() {
     );
 }
 
-export function ProtectedRoutes({ location }) {
-    if (location !== null) {
-        return location.children;
-    } else {
-        return <Navigate to="/" />;
-    }
-}
+// export function ProtectedRoutes({ location }) {
+//     if (location !== null) {
+//         return location.children;
+//     } else {
+//         return <Navigate to="/" />;
+//     }
+// }
 
 export default App;

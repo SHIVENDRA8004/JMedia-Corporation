@@ -2,7 +2,8 @@ import { useEffect } from "react";
 import "./Map.css";
 import mapboxgl from "mapbox-gl";
 
-const Map = () => {
+const Map = ({ location }) => {
+    console.log(location, "from map");
     useEffect(() => {
         mapboxgl.accessToken = "pk.eyJ1IjoiaGVsbG84MDA0IiwiYSI6ImNsaWZoaGU3bzB0cjIza3MwZ3U3bjZhbjgifQ.WvTmxC8woHj0QXfGURZ6wQ";
         const secondsPerRevolution = 100;
@@ -24,7 +25,7 @@ const Map = () => {
                 "high-color": "rgb(36, 92, 223)",
                 "horizon-blend": 0.01,
                 "space-color": "rgb(0,0,0,0.25)",
-                "star-intensity": 0.3,
+                "star-intensity": 0.4,
             });
             map.addSource("mapbox-dem", {
                 type: "raster-dem",
@@ -37,7 +38,7 @@ const Map = () => {
             });
         });
         const target = {
-            center: [8.11862, 46.58842],
+            center: [location.lng, location.lat],
             zoom: 12.5,
             bearing: 130,
             pitch: 75,

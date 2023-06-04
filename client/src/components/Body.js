@@ -29,7 +29,7 @@ const Body = ({ headQuarters, setLocation }) => {
                                             width: 300,
                                         }}
                                     >
-                                        <Link onClick={() => HandleClick(i)}>See On Map</Link>
+                                        <Link to="/map" onClick={() => HandleClick(i)}>See On Map</Link>
                                         <p>Card content</p>
                                         <p>Card content</p>
                                     </Card>
