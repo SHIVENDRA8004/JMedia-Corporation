@@ -48,21 +48,40 @@
     color: #111111;
     font-weight: 600;
 }
-
-.form {
-    padding: 20px 0;
-    position: relative;
-    z-index: 2;
-    width: 70%;
-    margin: 0 auto;
+.login .w-75 {
+    width: 75% !important;
+}
+.login .h-75 {
+    height: 75% !important;
+}
+@media screen and (max-width: 950px) {
+    .login .w-75 {
+        width: 100% !important;
+    }
+    .login .h-75 {
+        height: 100% !important;
+    }
+    .form button,
+    .webcam-btn {
+        width: 150px !important;
+    }
+}
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+a:hover {
+    color: #111111;
+    font-weight: 600;
 }
 .form input {
+    width: 80%;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     outline: 0;
+    display: block;
     border: 1px solid #111111;
-    width: 60%;
     border-radius: 12px;
     padding: 10px 15px;
     margin: 10px auto 10px auto;
@@ -99,7 +118,7 @@
     color: #ffffff;
     border-radius: 12px;
     font-size: 20px;
-    width: 30%;
+    width: 200px;
     cursor: pointer;
     transition-duration: 0.25s;
     margin: auto;
@@ -113,29 +132,6 @@
     font-weight: 600;
 }
 
-@media screen and (max-width: 1000px) {
-    .container {
-        max-width: 90vw;
-    }
-}
-@media screen and (max-width: 576px) {
-    .login {
-        height: 120vh !important;
-    }
-    .login-container {
-        padding-top: 10%;
-    }
-    .container {
-        max-width: 80vw;
-    }
-    .form {
-        width: 90%;
-    }
-    .container .text {
-        width: 100%;
-        padding: 80px 20px;
-    }
-}
 /* Webcame.js */
 .webcame,
 .image {
