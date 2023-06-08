@@ -15,13 +15,13 @@ const WebCam = () => {
     });
 
     return (
-        <div classname="bg-dark">
-            <div className="webcam-container">
-                <div className="webcam-img">
+        <div>
+            <div className="text-center">
+                <div>
                     {image === "" ? (
-                        <Webcam audio={false} height={200} ref={webcamRef} screenshotFormat="image/jpeg" width={220} videoConstraints={videoConstraints} />
+                        <Webcam class="webcame" audio={false} ref={webcamRef} screenshotFormat="image/jpeg" videoConstraints={videoConstraints} />
                     ) : (
-                        <img src={image} alt="imge" />
+                        <img className="image " src={image} alt="imge" />
                     )}
                 </div>
                 <div>
@@ -31,7 +31,7 @@ const WebCam = () => {
                                 e.preventDefault();
                                 setImage("");
                             }}
-                            className="webcam-btn"
+                            className="webcam-btn mt-5"
                         >
                             Retake Image
                         </button>
@@ -41,7 +41,7 @@ const WebCam = () => {
                                 e.preventDefault();
                                 capture();
                             }}
-                            className="webcam-btn"
+                            className="webcam-btn mt-5"
                         >
                             Capture
                         </button>
