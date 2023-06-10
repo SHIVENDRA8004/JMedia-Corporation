@@ -6,7 +6,7 @@ const Header = () => {
             <div className="row h-100">
                 <div className="col d-flex align-items-center">
                     <div className="me-auto logo fs-1 ">
-                        JMedia <span> Corporation </span>
+                        Pheonix <span> Labs </span>
                     </div>
                     <div>
                         <Link to="/login">
