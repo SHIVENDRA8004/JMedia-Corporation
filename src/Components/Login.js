@@ -1,5 +1,6 @@
 import { useState } from "react";
 import WebCam from "./Layout/WebCam";
+import { Link } from "react-router-dom";
 const Login = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -28,7 +29,7 @@ const Login = () => {
                                 <input type="password" placeholder="Password" onChange={(e) => setPass(e.target.value)} />
                                 <div className="d-flex justify-content-between align-items-center mt-5">
                                     <button>
-                                        <a href="/"> Cancel</a>
+                                        <Link to="/">Cancel</Link>
                                     </button>
                                     <button type="submit" id="login-button" onClick={(e) => submitForm(e)}>
                                         Submit
