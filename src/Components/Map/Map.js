@@ -4,7 +4,9 @@ import mapboxgl from "mapbox-gl";
 import { Button } from "antd";
 import { Link } from "react-router-dom";
 
+
 const Map = ({ location }) => {
+    
     useEffect(() => {
         mapboxgl.accessToken = "pk.eyJ1IjoiaGVsbG84MDA0IiwiYSI6ImNsaWZoaGU3bzB0cjIza3MwZ3U3bjZhbjgifQ.WvTmxC8woHj0QXfGURZ6wQ";
         const secondsPerRevolution = 100;
@@ -47,7 +49,7 @@ const Map = ({ location }) => {
         const fly = () => {
             map.flyTo({
                 ...target,
-                duration: 25000,
+                duration: 20000,
                 essential: true,
             });
         };
